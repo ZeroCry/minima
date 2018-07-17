@@ -5,9 +5,7 @@
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
+ 
 }
 
 .site-title {
@@ -172,12 +170,15 @@
 
 
 
+
 /**
  * Page content
  */
 .page-content {
   padding: $spacing-unit 0;
   flex: 1 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-heading {
@@ -250,6 +251,34 @@
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
+    }
+  }
+}
+
+.sidebar {
+
+
+
+  h3 {
+    font-weight: 300;
+    color: #202020;
+    font-size: 13px;
+    line-height: 20.8px; 
+    margin: 2em 0 0.5em;
+    text-transform: uppercase;
+  }
+  .sidebar-list {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    .sidebar-item {
+      display: block; 
+      text-decoration: none; 
+      font-size: 13px;
+      font-weight: 300;
+
     }
   }
 }
